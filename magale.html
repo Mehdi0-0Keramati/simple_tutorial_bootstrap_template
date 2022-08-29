@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>اینترنت, ISP, سرور, هاست و دامنه, چیست و چگونه کار می‌کند؟</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .rows,
+        .cardd {
+            position: relative;
+        }
+
+        .rows::after {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 20px;
+            width: 30%;
+            height: 1px;
+            background: gray;
+        }
+
+        .rows::before {
+            content: '';
+            position: absolute;
+            right: 12px;
+            top: 20px;
+            width: 30%;
+            height: 1px;
+            background: gray;
+        }
+
+        .cardd::after {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 20px;
+            width: 20%;
+            height: 1px;
+            background: gray;
+        }
+
+        .cardd::before {
+            content: '';
+            position: absolute;
+            right: 12px;
+            top: 20px;
+            width: 20%;
+            height: 1px;
+            background: gray;
+        }
+
+        @media (max-width:600px) {
+            .cardd {
+                position: static;
+            }
+        }
+
+        .borderr {
+            position: relative;
+            border: 1px dotted gray;
+            background: rgba(6, 193, 255, 0.08);
+        }
+
+        .borderr i {
+            cursor: pointer;
+        }
+
+        .borderr::after {
+            content: '1';
+            font-size: 15px;
+            position: absolute;
+            right: -15px;
+            text-align: center;
+            width: 29px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px solid gray;
+        }
+
+
+        .rowes .img {
+            overflow: hidden;
+        }
+
+
+        .rowes .card:hover,
+        .rowess .card:hover {
+            box-shadow: 0px 0px 30px black;
+        }
+
+        .rowes .img:hover img {
+            transform: scale(1.1);
+            transition: .5s;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!---------------- navbar----------------------->
+
+    <div class="header mb-5">
+        <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-close-white fs-4 ms-auto" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 align-items-baseline">
+                            <input type="search" class="d-lg-none d-flex w-100 border rounded-pill p-2"
+                                placeholder="آیندت رو سرچ کن!" style="outline: none;">
+                            <li class="nav-item d-lg-none">
+                                <a class="nav-link active" aria-current="page" href="login.html"><i
+                                        class="bi bi-house-door fs-4 "></i>
+                                    ورود</a>
+                            </li>
+                            <li class="nav-item d-lg-none  ">
+                                <a class="nav-link" href="login.html"><i class="bi bi-tv fs-4"></i> ثبت نام</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.htm"><i class="bi bi-house-door fs-4"></i> خانه</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="hame doreha.html"><i class="bi bi-tv fs-4"></i> ویدیو‌های
+                                    آموزشی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="magaleha.html"><i class="bi bi-card-text fs-4"></i> مقالات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="hamkary ba ma.html"><i class="bi bi-shop fs-4"></i> همکاری با
+                                    ما</a>
+                            </li>
+
+                        </ul>
+                        <ul
+                            class="w-100 h-25 list-unstyled fs-3 d-flex justify-content-evenly text-info d-lg-none mt-5">
+                            <li><i class="bi bi-instagram"></i></li>
+                            <li><i class="bi bi-telegram"></i></li>
+                            <li><i class="bi bi-linkedin"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-light d-none d-lg-flex align-items-baseline logo ">
+
+                <div class="dropdown dropbotton">
+                    <span class="bi bi-person-circle text-light fs-3 me-2 " id="dropdownMenuLink"
+                        data-bs-toggle="dropdown">
+                    </span>
+
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end  p-2 ">
+                        <li><a class="dropdown-item mb-1" href="login.html">ورود</a>
+                        </li>
+                        <div style="width: 100%;background: gray; height: 1px;"></div>
+                        <li><a class="dropdown-item" href="login.html">ثبت نام</a></li>
+                    </ul>
+                </div>
+
+                <h3>azki</h3>
+            </div>
+        </nav>
+    </div>
+    <!------------------------------main --------------->
+    <div class="container-fluid">
+        <div class="row bg-light">
+
+            <div class="col-lg-4" style="margin-top: 22%; box-shadow: 0px 10px 10px gainsboro; height: 250px;">
+                <div class="card bg-light border-0">
+                    <div class="row  rows">
+                        <div class="col  text-center">
+                            <h5 class="btn btn-dark p-2">اطلاعات مقاله</h5>
+                            <div class="d-flex align-items-baseline ms-4 my-2">
+                                <i class="bi bi-person fs-4"></i>
+                                <h4 class="text-muted">تالیف:</h4>
+                                <h4>مهدی کرامتی</h4>
+                            </div>
+                            <div class="d-flex align-items-baseline ms-4">
+                                <i class="bi bi-person fs-4"></i>
+                                <h4 class="text-muted">تاریخ انتشار:</h4>
+                                <h4>1 دی 1400</h4>
+                            </div>
+                            <div class="d-flex align-items-baseline ms-4 my-2">
+                                <i class="bi bi-person fs-4"></i>
+                                <h4 class="text-muted">مدت زمان مطالعه :</h4>
+                                <h4>4 دقیقه</h4>
+                            </div>
+                            <div class="d-flex fs-4 justify-content-end ">
+                                <a href="#"><i class="bi bi-instagram me-2 text-muted"></i></a>
+                                <a href="#"><i class="bi bi-telegram text-muted"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-8 cardd  text-center " style="margin-top: 15%;">
+                <h4 class="btn btn-dark ">اینترنت, ISP, سرور, هاست و دامنه, چیست و چگونه کار می‌کند؟</h4>
+                <div class="card bg-light text-dark  p-lg-5 p-4 text-start" style="line-height: 35px;">
+                    <h4 class="mb-4">اینترنت چیست؟</h4>
+                    <p>اينترنت مجموعه‌اي جهاني از شبكه‌هاي بزرگ و كوچك است كه به هم پيوسته‌اند و نام اينترنت (شبكه‌هاي
+                        در هم تنيده) از همين مجموعه گرفته شده است. به عبارتی بهتر صحبت از شبکه ای است که كارش را سال
+                        ۱۹۶۹ با چهار هسته يا سيستم كامپيوتري ميزبان آغاز كرد و بعدها به شدت گسترش یافت؛ شبکه‌ای است که
+                        به هيچ فرد، نهاد یا کشوری تعلق ندارد.</p>
+                    <h4 class="mt-5">برای اتصال به اینترنت نیازمند چه ابزارهایی می باشیم:</h4>
+                    <ul class="mt-2">
+                        <li> یک دستگاه رایانه مناسب</li>
+                        <li> یک دستگاه مودم و یا کارت شبکه در شبکه های محلی کاربرد دارد.</li>
+                        <li> یک رشته خط تلفن جهت اتصال به مودم که در صورت استفاده از کارت شکبه در شبکه های محلی مورد
+                            نیاز نبوده و در چنین مواردی از طریق رسانه های شبکه ( کابل شبکه و یا بی سیم و ... ) انجام می
+                            گردد</li>
+                        <li>داشتن کلمه کاربری و رمز عبور برای ورود به اینترنت که عموما با کارتهای اینترنتی از طریق یک
+                            ISP مناسب تهیه می گردد.</li>
+                    </ul>
+                    <h4 class="mt-5">ISP چیست؟</h4>
+                    <p>ISP برگرفته از كلمه Internet Service Provider یعنی شركت خدمات سرویس های اینترنت است. این شرکت ها
+                        علاوه بر نگهداری و پشتیبانی از یک خط مستقیم به اینترنت ، فعالیت های متعدد دیگری نظیر نگهداری و
+                        پشتیانی از سرویس دهندگان وب را نیز انجام می دهند .</p>
+
+                    <h4 class="mt-4">
+                        سرور چیست؟
+                    </h4>
+                    <p>
+                        سرور یک کامپیوتر همیشه روشن و همیشه در دسترس است، زمانی که این دسترسی تنها در محدوده یک شبکه
+                        داخلی باشد، آن را سرور تحت شبکه می نامیم و به این معنا خواهد بود که تمامی کامپیوتر های موجود در
+                        این شبکه از این کامپیوتر فرمان می گیرند و نیازهای تحت شبکه خود را به کمک آن تامین می کنند و سرور
+                        نقش آنها را در شبکه تعیین می نماید، حال اگر گستره این شبکه را کمی بیشتر نمائیم، و آن را متشکل از
+                        تمام کامپیوتر هایی که از طریق اینترنت به هم وصل شده اند بدانیم، با گروه بسیار بزرگی از کامپیوتر
+                        های همیشه روشن و همیشه در دسترس از طریق اینترنت روبرو هستیم که به آنها سرور های اینترنتی گفته می
+                        شود و وظیفه دارند تا اطلاعاتی که در هر زمان از شبانه روز، بر روی پهنای اینترنت جستجو می کنید را
+                        برای ملاحظه شما در اختیار قرار دهند.
+
+                        بنابراین به دو دسته بندی کلی دست می یابیم:
+                        <br>
+                        سرور ( server ) : کامیپوتری که سرویس می دهد.
+                        <br>
+                        کلاینت ( Client ) : کامپیوتری که سرویس می گیرد.
+                    </p>
+                    <h4 class="mt-4">
+                        هاست چیست؟
+                    </h4>
+                    <p>
+                        هاست (به زبان انگلیسی Host) به معنی میزبان است و به محیط مجازی اطلاق می شود که بر روی یک سرور
+                        برای یک سایت تدارک دیده شده است,ممکن است بر روی یک سرور ۱ یا ۱۰ و یا ۵۰۰ سایت و حتی بیشتر
+                        میزبانی شود و تعداد سایت های روی یک سرور به قدرت پردازنده و رم و فضای سرور و همچنین میزان
+                        استفاده وبسایت ها از این منابع بستگی دارد. این سرور نیاز به یک برنامه مدیریتی دارد که هر
+                        کابر(مدیر سایت) به صورت مجزا بتواند وب سایت خود را مدیریت کند که به صورت کلی شامل فضای وب
+                        سایت(هارد) , پایگاه داده و ایمیل می باشد و برای سرورهایی که از سیستم عامل لینوکس استفاده می کنند
+                        cPanel یکی از محبوب ترین نرم افزار های شناخته شده در این زمینه می باشد که امکانات فوق العاده ای
+                        به کاربر می دهد. تمامی فایل های یک وب سایت اعم از فایل های اسکریپتی یا چند رسانه ای و ... بر روی
+                        فضای هاست قرار میگید که مدیر وب سایت می تواند برای انتقال فایل ها از File Manager در داخل cPanel
+                        و یا نرم افزار FTP استفاده کند, این نرم افزار ها با پروتکل FTP و معمولا با پورت ۲۱ به سرور وصل
+                        می شوند و کاربرمی تواند فایل های مشخص شده را انتقال دهد.
+                    </p>
+                    <h4 class="mt-4">
+                        هاست اشتراکی چیست؟
+                    </h4>
+                    <p>
+                        زمانی که چند وب سایت بر روی یک سرور یا سرور مجازی قرار میگیرند از اصطلاح هاست اشتراکی استفاده می
+                        کنیم بدین معنی که منابع سرور فقط در اختیار یک سایت نیست و بین چند سایت مشترک هست و یکی از مسائل
+                        مهم در خصوص هاست اشتراکی مسئله امنیت آن می باشد که متاسفانه در خیلی از سرور ها به آن اهمیت داده
+                        نمی شود,مدیر سرور باید با استفاده از نرم افزار های امنیتی و کانفیگ حرفه ای فضای سرور را امن کند.
+                    </p>
+                    <h4 class="mt-4">
+                        دامنه چیست؟
+                    </h4>
+                    <p>
+                        ۱- نام دامنه: این اسمی است که شما برای سایت خودتان انتخاب می‌کنید. برای انتخاب اسم، شما هیچ
+                        محدودیتی ندارید. تنها مساله این است که اسم شما باید سرهم باشد. البته شما می‌توانید کلمات را با
+                        خط فاصله (-) از هم جدا کنید. <br>
+                        ۲- پسوند: در اینترنت پسوندهای بسیار متنوعی برای ثبت دامنه وجود دارند. هر کدام از این پسوندها،
+                        معنایی به خصوص دارند. برای مثال، پسوند ir به معنی آن است که سایت شما ایرانی است. پسوند com مخفف
+                        commerce است و به معنای سایت تجاری است. سایر پسوندها نیز هر کدام معنایی برای خود دارند.
+                    </p>
+                    <h4 class="mt-4">
+                        URL چیست و چه تفاوتی با دامنه دارد؟
+                    </h4>
+                    <p>
+                        شاید شما هم در مقالات متعدد دیده باشید که گاهاً از URL برای اشاره به آدرس یک وب سایت استفاده شده
+                        باشد و اکنون این سوال برایتان پیش آمده است که Domain با URL چه تفاوتی دارد؟ اجازه بدهید همه چیز
+                        را ساده نگه داریم و توضیحات را پیچیده نکنیم. دامنه یا دامین در واقع آدرس صفحه اصلی وب سایت شما
+                        هستند و هیچ کاراکتر و علامت اضافی در انتهای پسوند آن قرار نمی گیرد. اما URL به تمام مشتقات یک
+                        نام دامنه گفته می شود. <br>
+                        به عنوان مثال <a href="#"> https://www.webprog.ir </a> نام دامنه وب سایت است و بافی صفحات سایت
+                        ما دارای آدرس URL
+                        ای مانند <a href="#"> https://www.webprog.ir/article </a>یا <a href="#">
+                            https://www.webprog.ir/course </a>هستند. در نهایت باید
+                        این را بدانید که هر صفحه اینترنتی دارای یک آدرس است. صفحه اصلی یک وب‌سایت فقط خود دامنه است و
+                        صفحات دیگر آن، هر کدام دارای یک URL منحصر به فرد ه
+                    </p>
+                    <a href="#" class="fs-5 mt-4">
+                        #طراحی وب
+                    </a>
+                    <hr>
+                    <div class="d-flex justify-content-between py-1">
+                        <div class="d-flex fs-4">
+                            <a href="#"><i class="bi bi-bookmark me-2 text-dark"></i></a>
+                            <a href="#"><i class="bi bi-heart-fill text-dark"></i></a>
+                        </div>
+                        <div class="d-flex fs-4">
+                            <a href="#"><i class="bi bi-instagram me-2 text-muted"></i></a>
+                            <a href="#"><i class="bi bi-telegram text-muted"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container-fluid  mt-5">
+            <div class="d-flex justify-content-between flex-sm-row flex-column">
+                <h3 class="text-dark mb-5  d-flex align-items-baseline ">
+                    <div class="bg-success line rounded" style="width: 120px; height: 5px;"></div> پیشنهادی
+                </h3>
+                <a href="magaleha.html" class="text-dark fs-3 decoration mb-5 me-5">
+                    همه ی مقاله ها
+                </a>
+            </div>
+            <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 rowess ">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="img"> <img src="images/reactjs.png" class="card-img-top" alt="img1"></div>
+                        <span class="badge  fs-3 text-light position-absolute"><i
+                                class="bi bi-bookmark-fill "></i></span>
+                        <div class="card-body">
+                            <a href="#" class="card-title fs-5">نحوه ساختن یک Page Loader برای برنامه‌های React</a>
+                            <div class="d-flex">
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">طراحی-وب#</a>
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">#javascript</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">مهدی کرامتی</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="img"> <img src="images/reactjs.png" class="card-img-top" alt="img1"></div>
+                        <span class="badge  fs-3 text-light position-absolute"><i
+                                class="bi bi-bookmark-fill "></i></span>
+                        <div class="card-body">
+                            <a href="#" class="card-title fs-5">نحوه ساختن یک Page Loader برای برنامه‌های React</a>
+                            <div class="d-flex">
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">طراحی-وب#</a>
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">#javascript</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">مهدی کرامتی</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="img"> <img src="images/reactjs.png" class="card-img-top" alt="img1"></div>
+                        <span class="badge  fs-3 text-light position-absolute"><i
+                                class="bi bi-bookmark-fill "></i></span>
+                        <div class="card-body">
+                            <a href="#" class="card-title fs-5">نحوه ساختن یک Page Loader برای برنامه‌های React</a>
+                            <div class="d-flex">
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">طراحی-وب#</a>
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">#javascript</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">مهدی کرامتی</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="img"> <img src="images/reactjs.png" class="card-img-top" alt="img1"></div>
+                        <span class="badge  fs-3 text-light position-absolute"><i
+                                class="bi bi-bookmark-fill "></i></span>
+                        <div class="card-body">
+                            <a href="#" class="card-title fs-5">نحوه ساختن یک Page Loader برای برنامه‌های React</a>
+                            <div class="d-flex">
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">طراحی-وب#</a>
+                                <a href="#" class="bg-info text-light w-auto p-1 rounded me-2">#javascript</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">مهدی کرامتی</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="card bg-light mt-5 p-4">
+        <h3>نظرات کاربران:</h3>
+        <button class="btn btn-info text-primary fs-5">برای ارسال نظر ابتدا باید وارد سایت شوید
+        </button>
+        <div class="card bg-light p-3">
+            <div class="d-flex mt-4 align-items-baseline">
+                <i class="bi bi-person fs-1"></i>
+                <h3>user</h3>
+                <button class="btn btn-danger ms-4">پاسخ به دیدگاه</button>
+            </div>
+            <br>
+            <p>عالیه. دمتون گرم.</p>
+        </div>
+        <div class="card bg-dark text-light m-5 p-3">
+            <div class="d-flex mt-4 align-items-baseline">
+                <i class="bi bi-person-badge-fill fs-1"></i>
+                <h5>مهدی کرامتی</h5>
+            </div>
+            <br>
+            <p>سلام وقت بخیر.
+                <br>
+                ممنون❤
+            </p>
+        </div>
+        <div class="card bg-light p-3">
+            <div class="d-flex mt-4 align-items-baseline">
+                <i class="bi bi-person fs-1"></i>
+                <h3>eefa</h3>
+                <button class="btn btn-danger ms-4">پاسخ به دیدگاه</button>
+            </div>
+            <br>
+            <p>
+                سلام من دوره html cssشما را نگاه کردم خیلی روان و قابل فهم آموزش می دهید انشالله همیشه پایدار و پیروز
+                باشید
+            </p>
+        </div>
+        <div class="card bg-dark text-light m-5 p-3">
+            <div class="d-flex mt-4 align-items-baseline">
+                <i class="bi bi-person-badge-fill fs-1"></i>
+                <h5>مهدی کرامتی</h5>
+            </div>
+            <br>
+            <p>سلام.خدا رو شکر دوره براتون مفید بوده.
+                <br>
+                ممنون از انرژی که به ما دادین
+            </p>
+        </div>
+    </div>
+
+
+    <!-------------------------- footer----------------------->
+
+    <div class="footer w-100 p-5" style="background: rgb(44, 46, 49);">
+        <div class="row justify-content-center g-5">
+            <div class="col-md-4">
+                <div class="d-flex flex-column">
+                    <h5 class="text-light">
+                        درباره ما
+                    </h5>
+                    <div class="w-50 mb-3 mt-3 bg-light" style="height: 2px; "></div>
+                    <p class="text-light fs-5">
+                        اینبار تصمیم با خودته که سایتت به بهترین صورت ساخته شه با هزینه کمتر نسبت به بقیه!!!!!!!!!<br>
+                        پس معطل نکن و بهم پیام بده
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-column">
+                    <h5 class="text-light">
+                        بخش های سایت
+                    </h5>
+                    <div class="w-50 mb-3 mt-3 bg-light" style="height: 2px; "></div>
+                    <ul class="fs-6 text-light p-4 footer-ull">
+                        <li class="mb-3"><a href="hame doreha.html" class="text-light">دوره‌های آموزشی</a></li>
+                        <li class="mb-3"><a href="hame doreha.html" class="text-light">آخرین ویدیو‌ها</a></li>
+                        <li><a href="magaleha.html" class="text-light">مقالات آموزشی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-column">
+                    <h5 class="text-light">
+                        ارتباط با ما
+                    </h5>
+                    <div class="w-50 mb-3 mt-3 bg-light" style="height: 2px; "></div>
+                    <p class="text-light">
+                        شما میتوانید با استفاده از یکی از راه‌های زیر با من ارتباط برقرار کنید
+                    </p>
+                    <ul class="text-light footer-ul">
+                        <li><i class="bi bi-instagram fs-3 text-success"></i> @me._.lw </li>
+                        <li><i class="bi bi-telegram fs-3 text-info"></i> @me._.lw </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+
+
+
+</body>
+
+</html>
